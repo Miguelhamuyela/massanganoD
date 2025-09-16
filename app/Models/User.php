@@ -17,6 +17,7 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'role',
         'email',
         'password',
     ];
@@ -30,7 +31,7 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-
+    
     /**
      * The attributes that should be cast to native types.
      *
@@ -39,4 +40,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /* funções dos gates */
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
+    public function isEditor()
+    {
+        return in_array($this->role, ['admin', 'editor']);
+    }
+
+    public function isJornalista()
+    {
+        return in_array($this->role, ['admin', 'editor', 'jornalista']);
+    }
 }
