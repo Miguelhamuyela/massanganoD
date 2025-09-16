@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class UserTableSeeder extends Seeder
 {
@@ -21,10 +22,19 @@ class UserTableSeeder extends Seeder
                 'name' => 'Infosi',
                 'email' => 'admin@infosi.com',
                 'email_verified_at' => NULL,
-                'password' => '$2y$10$u/wQCq/pvkdXQJOA48xDLe.o/KNhFZWbH7ZpeGn2AJdbTJjZePQ6G',
+                'password' => Hash::make('admin123'),
+                'role' => 'admin',
                 'remember_token' => NULL,
-                'created_at' => '2025-09-05 08:53:48',
-                'updated_at' => '2025-09-05 08:53:48',
+            ),
+            1 =>
+            array (
+                'id' => 2,
+                'name' => 'User',
+                'email' => 'admin@user.com',
+                'email_verified_at' => NULL,
+                'password' => Hash::make('admin123'),
+                'role' => 'user',
+                'remember_token' => NULL,
             ),
         ));
     }

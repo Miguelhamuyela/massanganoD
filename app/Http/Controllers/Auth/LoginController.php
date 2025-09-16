@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    /* protected $redirectTo = RouteServiceProvider::HOME; */
 
     /**
      * Create a new controller instance.
@@ -52,6 +52,18 @@ class LoginController extends Controller
 
     protected function authenticated(Request $request, $user)
     {
-        return redirect()->intended('/admin/dashboard')->with('success', 'Login feito com sucesso. Bem-vindo, ' . $user->name . '!');
+        switch ($user->role) {
+            case 'admin':
+                return redirect()->intended('/admin/dashboard');
+                break;
+            case 'user':
+                return redirect()->intended('/');
+                break;
+            default:
+                $redirectTo = '/login';
+                Auth::logout();
+                return redirect()->intended('/login')->with('error', 'Função de usuário desconhecida. Por favor, contacte o administrador.');
+        }
+        
     }
 }
