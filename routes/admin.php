@@ -23,18 +23,13 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Admin\CategoryController;
 
+Route::redirect('admin', '/admin/dashboard');
 Route::group(['middleware' => ['auth', 'role:admin']], function () {
-/*-------------------------------------------------------
-                    Dashboard routes
--------------------------------------------------------*/
-
-Route::get('admin/dashboard', function () {
+    /* Dashboard routes */
+    Route::get('admin/dashboard', function () {
     return view('_admin.dashboard.crm.index');
-})->middleware('auth');
-
-    /*-------------------------------------------------------
-                    Category routes
--------------------------------------------------------*/
+    });
+    /* Category routes */
 
     Route::prefix('_admin.categories')->name('admin.')->group(function () {
         Route::get('categories', [CategoryController::class, 'index'])->name('categories.index')->middleware('role:admin');
@@ -45,9 +40,8 @@ Route::get('admin/dashboard', function () {
         Route::put('categoryUpdate/{category}', [CategoryController::class, 'update'])->name('category.update')->middleware('auth');
         Route::get('categoryDelete/{category}', [CategoryController::class, 'destroy'])->name('category.delete')->middleware('auth');
     });
-    /*-------------------------------------------------------
-                    Author routes
--------------------------------------------------------*/
+    /* Author routes */
+
     /*
 Route::prefix('_admin.authors')->name('admin.')->group(function () {
     Route::get('author', [AuthorController::class, 'index'])->name('author.index')->middleware('auth');
@@ -270,8 +264,8 @@ Route::prefix('_admin.authors')->name('admin.')->group(function () {
 -------------------------------------------------------*/
 
     Auth::routes();
-    Route::redirect('/home', '/admin');
-    Route::get('/admin', 'HomeController@index')->name('home')->middleware('auth');
+    /* Route::redirect('/home', '/admin'); */
+    /* Route::get('/admin', 'HomeController@index')->name('home')->middleware('auth'); */
     Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
     Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
     Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
