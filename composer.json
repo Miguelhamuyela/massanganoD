@@ -11,10 +11,11 @@
         "php": "^7.2.5",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
-        "guzzlehttp/guzzle": "^6.3",
+        "guzzlehttp/guzzle": "^7.8",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "laravel/ui": "^2.5"
+        "laravel/ui": "^2.5",
+        "wildbit/swiftmailer-postmark": "^3.4"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
@@ -61,5 +62,6 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    }
+    },
+    "aws/aws-sdk-php": "~3.0"
 }
