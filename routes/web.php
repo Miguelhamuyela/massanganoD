@@ -2,10 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Site\SiteController;
+use App\Http\Controllers\contactController;
 
 
 /* Site Routes */
- 
+Route::post('/teste', [contactController::class, 'sendMail'])->name('sendMail');
+Route::get('/contato', function(){
+    return view('contato');
+});
 Route::redirect('/', 'site/home');
 
 Route::get('site/home', [SiteController::class, 'home'])->name('site.home');
