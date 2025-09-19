@@ -1,6 +1,6 @@
 <div class="th-menu-wrapper">
     <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-        <div class="mobile-logo"><a href="/"><img src="{{ url('site/assets/img/1-Photoroom.png') }}"
+        <div class="mobile-logo"><a href="/"><img src="{{ url('site/assets/img/sigecepa2.png') }}"
                     alt="Assessorarte"></a></div>
         <div class="th-mobile-menu">
             <ul>

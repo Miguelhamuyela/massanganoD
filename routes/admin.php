@@ -22,13 +22,13 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\HomeController;
 
 Route::redirect('admin', '/admin/dashboard');
 Route::group(['middleware' => ['auth', 'role:admin']], function () {
     /* Dashboard routes */
-    Route::get('admin/dashboard', function () {
-    return view('_admin.dashboard.crm.index');
-    });
+    Route::get('admin/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
+    
     /* Category routes */
 
     Route::prefix('_admin.categories')->name('admin.')->group(function () {

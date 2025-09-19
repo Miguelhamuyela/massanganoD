@@ -6,9 +6,9 @@
         <div class="m-header">
             <a href="/admin/dashboard" class="b-brand">
                 <!-- ========   change your logo hear   ============ -->
-                <img src="{{ url('assets/images/3-Photoroom.png') }}" alt="SOS" class="logo logo-lg"
+                <img src="{{ url('assets/images/sigecepa.png') }}" alt="SOS" class="logo logo-lg"
                     style="heigth:10rem; width:12rem;">
-                <img src="{{ url('assets/images/2-Photoroom.png') }}" alt="" class="logo logo-sm">
+                <img src="{{ url('assets/images/sigecepa2.png') }}" alt="" class="logo logo-sm">
             </a>
         </div>
         <div class="navbar-content">
