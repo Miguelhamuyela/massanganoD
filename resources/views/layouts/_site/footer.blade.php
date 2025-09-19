@@ -8,7 +8,7 @@
                         <div class="th-widget-about">
                             <div class="about-logo">
                                 <a href="/">
-                                    <img src="assets/img/1-Photoroom.png" alt="Tnews">
+                                    <img src="{{ url('site/assets/img/sigecepa.png')}}" alt="sigecepa">
                                 </a>
                             </div>
                             <p class="about-text">As revistas abrangem uma ampla gama de assuntos, incluindo, entre
@@ -117,7 +117,7 @@
             <div class="row jusity-content-between align-items-center">
                 <div class="col-lg-5">
                     <p class="copyright-text">Copyright <i class="fal fa-copyright"></i> 2025 <a
-                            href="home-newspaper.html">Tnews</a>. All Rights Reserved.</p>
+                            href="home-newspaper.html">SigeCepa</a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-lg-auto ms-auto d-none d-lg-block">
                     <div class="footer-links">
