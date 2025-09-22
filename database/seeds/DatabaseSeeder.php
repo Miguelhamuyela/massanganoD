@@ -21,6 +21,9 @@ class DatabaseSeeder extends Seeder
             PublicationTableSeeder::class,
             AdvertisementsTableSeeder::class,
             UserTableSeeder::class,
+            ProvinceTableSeeder::class,
+            CountyTableSeeder::class,
+            CourseTableSeeder::class,
         ]);
     }
 }

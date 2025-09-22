@@ -240,7 +240,7 @@
                 <div class="col-xxl-8">
                     <div class="card stretch stretch-full">
                         <div class="card-header">
-                            <h5 class="card-title">Payment Record</h5>
+                            <h5 class="card-title">Ranking das Melhores Univercidades</h5>
                             <div class="card-header-action">
                                 <div class="card-header-btn">
                                     <div data-bs-toggle="tooltip" title="Delete">

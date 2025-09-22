@@ -21,8 +21,6 @@ class CreateFinalistsTable extends Migration
             $table->string('bi')->unique();
             $table->String('file');
             $table->String('cover')->nullable();
-            $table->String('rector')->nullable();
-            $table->String('rector_phone')->nullable();
             $table->unsignedBigInteger('id_schools');
             $table->unsignedBigInteger('id_courses');
             $table->foreign('id_schools')->references('id')->on('schools')->onDelete('cascade');

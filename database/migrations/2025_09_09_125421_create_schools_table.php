@@ -22,6 +22,8 @@ class CreateSchoolsTable extends Migration
             $table->string('phone');
             $table->string('nRoom');
             $table->string('bout');
+            $table->String('rector')->nullable();
+            $table->String('rector_phone')->nullable();
             $table->string('image')->nullable();
             $table->string('schoolCategory')->nullable();
             $table->text('description')->nullable();
