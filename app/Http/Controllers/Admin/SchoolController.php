@@ -12,11 +12,6 @@ use App\Models\Course;
 
 class SchoolController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
 
     public function School()
     {
@@ -24,11 +19,6 @@ class SchoolController extends Controller
         return view('_admin.schools.list.index', compact('schools'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         $courses = Course::all();
@@ -37,12 +27,6 @@ class SchoolController extends Controller
         return view('_admin.schools.create.index', compact('provinces', 'counties', 'courses'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $data = $request->validate([
@@ -51,6 +35,8 @@ class SchoolController extends Controller
             'email'       => 'required|email|unique:schools',
             'nif'         => 'required|string|unique:schools',
             'phone'       => 'required|string',
+            'rector'     => 'required|string',
+            'rector_phone' => 'required|string',
             'nRoom'       => 'required|string',
             'bout'        => 'required|string',
             'image' => 'nullable|image|mimes:jpg,jpeg,png',
@@ -84,12 +70,6 @@ class SchoolController extends Controller
         return redirect()->back()->with('error', 'Ocorreu um erro ao cadastrar!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show(School $school)
     {
         //
@@ -97,12 +77,6 @@ class SchoolController extends Controller
         return view('_admin.schools.details.index', ['school' => $school]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit(School $school)
     {
         $provinces = Province::all();
@@ -111,13 +85,6 @@ class SchoolController extends Controller
         return view('_admin.schools.edit.index', compact('school', 'provinces', 'counties', 'courses'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, School $school)
     {
 
@@ -127,6 +94,8 @@ class SchoolController extends Controller
             'email'       => 'required|email|unique:schools',
             'nif'         => 'required|string|unique:schools',
             'phone'       => 'required|string',
+            'rector'     => 'required|string',
+            'rector_phone' => 'required|string',
             'nRoom'       => 'required|string',
             'bout'        => 'required|string',
             'schoolType'  => 'required|in:publica, privada',
@@ -145,6 +114,8 @@ class SchoolController extends Controller
             'email'       => $request->email,
             'nif'         => $request->nif,
             'phone'       => $request->phone,
+            'rector'     => $request->rector,
+            'rector_phone' => $request->rector_phone,
             'nRoom'       => $request->nRoom,
             'bout'        => $request->bout,
             'image'       => $request->image,
@@ -169,13 +140,6 @@ class SchoolController extends Controller
         return redirect()->route('admin.school.update')->with('success', 'Escola atualizada com sucesso!');
         return redirect()->back()->with('error', 'Ocorreu um erro ao Salver Universidade!');
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(School $school)
     {
         $school = School::findOrFail($school);

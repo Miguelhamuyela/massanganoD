@@ -34,6 +34,20 @@
             placeholder="Ex: +244 923 000   000 / +244 923 000 000">
     </div>
 
+    {{-- Reitor --}}
+    <div class="col-lg-4 mb-4">
+        <label class="form-label">Nome do Reitor</label>
+        <input type="text" name="rector" class="form-control" value="{{ old('rector', $school->rector ?? '') }}"
+            placeholder="Ex: Nome do Reitor..">
+    </div>
+    {{-- Telefone do Reitor --}}
+    <div class="col-lg-4 mb-4">
+        <label class="form-label">Telefone do Reitor</label>
+        <input type="text" name="rector_phone" class="form-control"
+            value="{{ old('rector_phone', $school->rector_phone ?? '') }}"
+            placeholder="Ex: +244 923 000   000 / +244 923 000 000">
+    </div>
+
     {{-- Image --}}
     <div class="col-lg-4 mb-4">
         <label class="form-label">Imagem/Logo da Universidade</label>
