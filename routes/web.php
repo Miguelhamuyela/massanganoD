@@ -34,3 +34,4 @@ Route::get('site/publication', [SiteController::class, 'publication'])->name('si
 Route::get('site/videos', [SiteController::class, 'videos'])->name('site.videos');
 Route::get('site/galery', [SiteController::class, 'galery'])->name('site.galery');
 Route::get('site/newsDetails/{news}', [NewsController::class, 'details'])->name('site.news.details');
+Route::get('site/newsList/{category}', [NewsController::class, 'list'])->name('site.news.list');

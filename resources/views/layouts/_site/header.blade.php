@@ -19,7 +19,7 @@
                                         <div class="row slick-marquee">
                                             @foreach ($breaknews as $topic)
                                                 <div class="col-auto">
-                                                    <a href="{{ route('site.newsDetails', ['news' => $topic->id]) }}"
+                                                    <a href="{{ route('site.news.details', ['news' => $topic->id]) }}"
                                                         class="breaking-news">{{ $topic->title }}</a>
                                                 </div>
                                             @endforeach
@@ -76,7 +76,7 @@
                                         <li>
                                             <a href="/">Home</a>
                                         </li>
-                                        <li><a href="{{ route('site.policy') }}">Política</a></li>
+                                        <li><a href="{{ route('site.policy', ['Politica']) }}">Política</a></li>
                                         <li><a href="{{ route('site.society') }}">Sociedade</a></li>
                                         <li><a href="{{ route('site.economic') }}">Economia</a></li>
                                         <li><a href="{{ route('site.culture') }}">Artes & Cultura</a></li>
