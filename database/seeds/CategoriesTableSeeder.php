@@ -138,6 +138,16 @@ class CategoriesTableSeeder extends Seeder
                 'created_at' => '2025-08-27 08:30:50',
                 'updated_at' => '2025-08-27 08:30:50',
             ),
+            12 =>
+            array(
+                'id' => 13,
+                'name' => 'Ensino_Superior',
+                'description' => 'Categoria Ensino Superior do Tipo de Categoria Seleções Nacionais',
+                'typecategory_id' => 17,
+                'deleted_at' => NULL,
+                'created_at' => '2025-09-23 08:30:50',
+                'updated_at' => '2025-09-23 08:30:50',
+            ),
         ));
     }
 }

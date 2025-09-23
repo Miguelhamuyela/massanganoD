@@ -32,7 +32,7 @@
                                             @endforeach
                                             <h3 class="box-title-30">
                                                 <a class="hover-line"
-                                                    href="{{ route('site.newsView', ['news' => $item]) }}">{{ Str::limit($item->title, 50) }}</a>
+                                                    href="{{ route('site.news.details', ['news' => $item]) }}">{{ Str::limit($item->title, 50) }}</a>
                                             </h3>
                                             <p class="blog-text">{{ Str::limit($item->subtitle, 100) }}</p>
                                             <div class="blog-meta">
@@ -40,7 +40,7 @@
                                                 <a href="#"><i
                                                         class="fal fa-calendar-days"></i>{{ $item->updated_at->format('d M, Y') }}</a>
                                             </div>
-                                            <a href="{{ route('site.newsView', ['news' => $item]) }}"
+                                            <a href="{{ route('site.news.details', ['news' => $item]) }}"
                                                 class="th-btn style2">Ver mais<i class="fas fa-arrow-up-right ms-2"></i></a>
                                         </div>
                                     </div>
