@@ -1,6 +1,7 @@
 @extends('layouts._site.main')
-@section('title', 'Assessorarte- Home')
+@section('title', 'Sigecepa- Home')
 @section('content')
+@include('layouts._site.popupSubscribe')
     {{-- Sessão dos noticias da categoria Politica com mais destaque e as mais recentes --}}
     <div class="th-hero-wrapper hero-1" id="hero">
         <div class="hero-slider-1 th-carousel" data-fade="true" data-slide-show="1" data-md-slide-show="1"

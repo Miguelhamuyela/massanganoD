@@ -10,6 +10,8 @@ use App\Models\Finalist;
 use App\Models\School;
 use App\Models\Course;
 use Facade\FlareClient\Stacktrace\File;
+use App\Mail\contatoMail;
+use Illuminate\Support\Facades\Mail;
 
 class FinalistController extends Controller
 {
@@ -87,6 +89,10 @@ class FinalistController extends Controller
             'id_courses' => $request->id_courses,
         ]);
 
+        if(Finalist::count() > 0){
+            $mensagem = "Novo Finalista Cadastrado: " . $request->name . ", Email: " . $request->email . ", BI: " . $request->bi . ", Telefone: " . $request->phone;
+            Mail::to('batistalando7@gmail.com')->send(new contatoMail($mensagem));
+        }
         return redirect()->route('admin.finalist.listar')->with('success', 'Finalista criado com sucesso.');
     }
 

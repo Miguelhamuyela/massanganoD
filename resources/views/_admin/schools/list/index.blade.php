@@ -1,6 +1,6 @@
 @extends('layouts._admin.main')
 
-@section('title', 'Assessorarte- Listar Univercidades')
+@section('title', 'Sigecepa- Listar Univercidades')
 
 @section('content')
     <div class="nxl-content">

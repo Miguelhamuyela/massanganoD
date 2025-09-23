@@ -1,5 +1,5 @@
 @extends('layouts._site.main')
-@section('title', 'Assessorarte- Sociedade')
+@section('title', 'Sigecepa- Sociedade')
 @section('content')
 
     <div class="breadcumb-wrapper">

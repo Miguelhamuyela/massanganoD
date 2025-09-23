@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte- Editar Autor')
+@section('title', 'Sigecepa- Editar Autor')
 @section('content')
     <!--! ================================================================ !-->
     <!--! [Start] Main Content !-->

@@ -21,10 +21,7 @@ class SiteController extends Controller
         /* Noticia da Categoria Politica com mais destaques */
         $newsDetach = News::where('detach', 'destaque') // apenas notícias destaque
             ->whereHas('category', function ($query) {
-                $query->whereIn('name', [
-                    'Politica',
-                    'Politicas'
-                ]);
+                $query->whereIn('name', ['Ensino_Superior']);
             })
             ->orderByDesc('id') // pega a mais recente
             ->take(6)

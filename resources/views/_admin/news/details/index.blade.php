@@ -1,6 +1,6 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte- Visualizar Notícia')
-@section('content-newsView')
+@section('title', 'Sigecepa- Visualizar Notícia')
+@section('content')
     <div class="nxl-content">
         <!-- [ page-header ] start -->
         <div class="page-header">
@@ -183,7 +183,7 @@
             <div class="description-container">
                 <h5 class="mb-4"><i class="fas fa-align-left me-2"></i>Descrição da Notícia</h5>
                 <div class="event-description">
-                    {!! nl2br(e($news->description)) !!}
+                    {!! ($news->description) !!}
                 </div>
             </div>
         </div>

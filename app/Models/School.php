@@ -19,6 +19,8 @@ class School extends Model
         'email',
         'nif',
         'phone',
+        'rector',
+        'rector_phone',
         'nRoom',
         'bout',
         'image',
