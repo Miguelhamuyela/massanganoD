@@ -22,7 +22,7 @@
                             <br>
                             <h3 data-ani="slideinup" data-ani-delay="0.3s" class="box-title-50">
                                 <a class="hover-line"
-                                    href="{{ route('site.newsDetails', ['news' => $detach->id]) }}">{{ $detach->title }}</a>
+                                    href="{{ route('site.news.details', ['news' => $detach->id]) }}">{{ $detach->title }}</a>
                             </h3>
                             <div class="blog-meta" data-ani="slideinup" data-ani-delay="0.5s">
                                 <a href="author.html">
@@ -89,7 +89,7 @@
                                 @endforeach
                                 <h3 class="box-title-20">
                                     <a class="hover-line"
-                                        href="{{ route('site.newsDetails', ['news' => $news]) }}">{{ Str::limit($news->title, 45) }}</a>
+                                        href="{{ route('site.news.details', ['news' => $news]) }}">{{ Str::limit($news->title, 45) }}</a>
                                 </h3>
                                 <div class="blog-meta">
                                     <a href="author.html">
@@ -140,7 +140,7 @@
                                     </div>
                                     <h3 class="box-title-22">
                                         <a class="hover-line"
-                                            href="{{ route('site.newsDetails', ['news' => $today]) }}">{{ Str::limit($today->title, 45) }}</a>
+                                            href="{{ route('site.news.details', ['news' => $today]) }}">{{ Str::limit($today->title, 45) }}</a>
                                     </h3>
                                     <div class="blog-meta">
                                         <a href="author.html">
@@ -171,7 +171,7 @@
                                     @endforeach
                                     <h3 class="box-title-40">
                                         <a class="hover-line"
-                                            href="{{ route('site.newsDetails', ['news' => $today1]) }}">{{ Str::limit($today1->title, 45) }}</a>
+                                            href="{{ route('site.news.details', ['news' => $today1]) }}">{{ Str::limit($today1->title, 45) }}</a>
                                     </h3>
                                     <div class="blog-meta">
                                         <a href="author.html">
@@ -246,7 +246,7 @@
                                 @endforeach
                                 <h3 class="box-title-24">
                                     <a class="hover-line"
-                                        href="{{ route('site.newsDetails', ['news' => $today1]) }}">{{ Str::limit($today1->title, 45) }}</a>
+                                        href="{{ route('site.news.details', ['news' => $today1]) }}">{{ Str::limit($today1->title, 45) }}</a>
                                 </h3>
                                 <div class="blog-meta">
                                     <a href="author.html">
@@ -278,7 +278,7 @@
                                 @endforeach
                                 <h3 class="box-title-20">
                                     <a class="hover-line"
-                                        href="{{ route('site.newsDetails', ['news' => $newspolicy]) }}">{{ Str::limit($newspolicy->title, 50) }}</a>
+                                        href="{{ route('site.news.details', ['news' => $newspolicy]) }}">{{ Str::limit($newspolicy->title, 50) }}</a>
                                 </h3>
                                 <div class="blog-meta">
                                     <a href="blog.html">
@@ -308,7 +308,7 @@
                                 @endforeach
                                 <h3 class="box-title-20">
                                     <a class="hover-line"
-                                        href="{{ route('site.newsDetails', ['news' => $newsculture]) }}">{{ Str::limit($newsculture->title, 50) }}</a>
+                                        href="{{ route('site.news.details', ['news' => $newsculture]) }}">{{ Str::limit($newsculture->title, 50) }}</a>
                                 </h3>
                                 <div class="blog-meta">
                                     <a href="blog.html">
@@ -338,7 +338,7 @@
                                 @endforeach
                                 <h3 class="box-title-20">
                                     <a class="hover-line"
-                                        href="{{ route('site.newsDetails', ['news' => $newssport->id]) }}">{{ Str::limit($newssport->title, 50) }}</a>
+                                        href="{{ route('site.news.details', ['news' => $newssport->id]) }}">{{ Str::limit($newssport->title, 50) }}</a>
                                 </h3>
                                 <div class="blog-meta">
                                     <a href="blog.html">
@@ -376,7 +376,7 @@
                                             {{ $newsTech1->category->name }}
                                         </a>
                                         <h3 class="box-title-40">
-                                            <a class="hover-line" href="{{ route('site.newsDetails', $newsTech1->id) }}">
+                                            <a class="hover-line" href="{{ route('site.news.details', $newsTech1->id) }}">
                                                 {{ Str::limit($newsTech1->title, 85) }}
                                             </a>
                                         </h3>
@@ -411,7 +411,7 @@
                                         @endforeach
                                         <h3 class="box-title-20">
                                             <a class="hover-line"
-                                                href="{{ route('site.newsDetails', ['news' => $newstech->id]) }}">{{ Str::limit($newstech->title, 50) }}</a>
+                                                href="{{ route('site.news.details', ['news' => $newstech->id]) }}">{{ Str::limit($newstech->title, 50) }}</a>
                                         </h3>
                                         <div class="blog-meta">
                                             <a href="blog.html">
