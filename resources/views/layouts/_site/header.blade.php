@@ -19,7 +19,7 @@
                                         <div class="row slick-marquee">
                                             @foreach ($breaknews as $topic)
                                                 <div class="col-auto">
-                                                    <a href="{{ route('site.newsView', ['news' => $topic->id]) }}"
+                                                    <a href="{{ route('site.newsDetails', ['news' => $topic->id]) }}"
                                                         class="breaking-news">{{ $topic->title }}</a>
                                                 </div>
                                             @endforeach
