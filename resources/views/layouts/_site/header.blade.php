@@ -76,10 +76,10 @@
                                         <li>
                                             <a href="/">Home</a>
                                         </li>
-                                        <li><a href="{{ route('site.policy', ['Politica']) }}">Política</a></li>
-                                        <li><a href="{{ route('site.society') }}">Sociedade</a></li>
-                                        <li><a href="{{ route('site.economic') }}">Economia</a></li>
-                                        <li><a href="{{ route('site.culture') }}">Artes & Cultura</a></li>
+                                        <li><a href="{{ route('site.news.list', ['Politica']) }}">Política</a></li>
+                                        <li><a href="{{ route('site.news.list', ['Sociedade']) }}">Sociedade</a></li>
+                                        <li><a href="{{ route('site.news.list', ['Economia']) }}">Economia</a></li>
+                                        <li><a href="{{ route('site.news.list', ['Cultura']) }}">Artes & Cultura</a></li>
                                         <li class="menu-item-has-children">
                                             <a href="#">Desportos</a>
                                             <ul class="sub-menu">
