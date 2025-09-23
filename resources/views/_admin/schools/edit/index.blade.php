@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte- Editar Universidade')
+@section('title', 'Sogecepa- Editar Universidade')
 @section('content')
 
     <!-- [ Craete Form ] -->

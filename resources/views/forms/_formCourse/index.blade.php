@@ -1,7 +1,7 @@
  <div class="row">
      {{-- Nome --}}
      <div class="col-lg-4 mb-4">
-         <label class="form-label">Nome da Curso</label>
+         <label class="form-label">Nome da Curso/Faculdade</label>
          <input type="text" name="name" class="form-control" value="{{ old('nome') }}"
              placeholder="Ex: Informática...">
      </div>

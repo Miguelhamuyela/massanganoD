@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte- Visualizar Notícia')
+@section('title', 'Sogecepa- Visualizar Notícia')
 @section('content-newsView')
     <div class="nxl-content">
         <!-- [ page-header ] start -->
@@ -154,21 +154,21 @@
                 {{--  <div class="col-md-6 mb-4">
                     <div class="info-card">
                         <h5><i class="fas fa-link me-2"></i>Informações Adicionais</h5>
-                        
+
                         <div class="info-item">
                             <div class="info-label">Slug:</div>
                             <div class="info-value text-break">
                                 {{ $news->slug }}
                             </div>
                         </div>
-                        
+
                         <div class="info-item">
                             <div class="info-label">Imagem:</div>
                             <div class="info-value text-break">
                                 {{ $news->image }}
                             </div>
                         </div>
-                        
+
                         <div class="info-item">
                             <div class="info-label">ID da Categoria:</div>
                             <div class="info-value">

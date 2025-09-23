@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'Analytics - Dashboard')
+@section('title', 'Sogecepa - Dashboard')
 @section('content')
     <div class="nxl-content">
         <!-- [ page-header ] start -->

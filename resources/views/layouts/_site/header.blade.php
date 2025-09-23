@@ -77,9 +77,17 @@
                                             <a href="/">Home</a>
                                         </li>
                                         <li><a href="{{ route('site.policy') }}">Política</a></li>
-                                        <li><a href="{{ route('site.society') }}">Sociedade</a></li>
+
                                         <li><a href="{{ route('site.economic') }}">Economia</a></li>
                                         <li><a href="{{ route('site.culture') }}">Artes & Cultura</a></li>
+                                          <li class="menu-item-has-children">
+                                            <a href="#">Serviço</a>
+                                            <ul class="sub-menu">
+                                                 <li><a href="{{ route('site.society') }}">Sociedade</a></li>
+                                                <li><a href="https://sepe.gov.ao">Sepe</a></li>
+                                                <li><a href="https://inagb.gov.ao">Inagb</a></li>
+                                            </ul>
+                                         </li>
                                         <li class="menu-item-has-children">
                                             <a href="#">Desportos</a>
                                             <ul class="sub-menu">

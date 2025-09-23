@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte- Editar Autor')
+@section('title', 'Sogecepa- Editar Autor')
 @section('content')
     <!--! ================================================================ !-->
     <!--! [Start] Main Content !-->
@@ -104,7 +104,7 @@
                     <form id="UserForm" action="{{ route('admin.user.update', ['user' => $user]) }}" method="post"
                         enctype="multipart/form-data">
                         @csrf
-                        @method('PUT')                     
+                        @method('PUT')
                         @include('forms._formUser.index')
                     </form>
 

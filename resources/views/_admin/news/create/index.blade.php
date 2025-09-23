@@ -1,6 +1,6 @@
 @extends('layouts._admin.main')
 
-@section('title', 'Assessorarte- Criar Notícia')
+@section('title', 'Sogecepa- Criar Notícia')
 
 @section('content')
     <!-- [ Craete Form ] -->
