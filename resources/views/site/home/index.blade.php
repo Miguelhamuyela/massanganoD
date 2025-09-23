@@ -1,6 +1,7 @@
 @extends('layouts._site.main')
-@section('title', 'Assessorarte- Home')
+@section('title', 'Sigecepa- Home')
 @section('content')
+@include('layouts._site.popupSubscribe')
     {{-- Sessão dos noticias da categoria Politica com mais destaque e as mais recentes --}}
     <div class="th-hero-wrapper hero-1" id="hero">
         <div class="hero-slider-1 th-carousel" data-fade="true" data-slide-show="1" data-md-slide-show="1"
@@ -8,7 +9,7 @@
             @foreach ($newsDetach as $detach)
                 <div class="th-hero-slide">
                     <div class="th-hero-bg" data-overlay="black" data-opacity="6"
-                        data-bg-src="{{ url('img/post1.jpeg') }}">
+                        data-bg-src="{{ url('img/news/' . $detach->image) }}">
                     </div>
                     <div class="container">
                         <div class="blog-bg-style1">
@@ -21,7 +22,7 @@
                             <br>
                             <h3 data-ani="slideinup" data-ani-delay="0.3s" class="box-title-50">
                                 <a class="hover-line"
-                                    href="{{ route('site.newsView', ['news' => $detach->id]) }}">{{ 'Ensino Superior apoia formação em tecnologia'}}</a>
+                                    href="{{ route('site.newsView', ['news' => $detach->id]) }}">{{ $detach->title }}</a>
                             </h3>
                             <div class="blog-meta" data-ani="slideinup" data-ani-delay="0.5s">
                                 <a href="author.html">

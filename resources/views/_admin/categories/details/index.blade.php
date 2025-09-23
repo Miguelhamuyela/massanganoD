@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte- Visualizar Categoria')
+@section('title', 'Sigecepa- Visualizar Categoria')
 @section('content')
 
     <div class="nxl-content">

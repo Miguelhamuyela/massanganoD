@@ -1,5 +1,5 @@
 @extends('layouts._admin.main')
-@section('title', 'Assessorarte- Listar Ads(Publicidades)')
+@section('title', 'Sigecepa- Listar Ads(Publicidades)')
 @section('content')
     <div class="nxl-content">
         <!-- [ page-header ] start -->

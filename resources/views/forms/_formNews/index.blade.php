@@ -97,7 +97,7 @@
     {{-- Descrição --}}
     <div class="col-12 mb-4">
         <label class="form-label">Texto</label>
-        <textarea name="description" class="form-control" rows="4" placeholder="Escreve o corpo da notícia...">{{ old('description', $news->description ?? '') }}</textarea>
+        <textarea name="description" id="editor" rows="4" placeholder="Escreve o corpo da notícia...">{{ old('description', $news->description ?? '') }}</textarea>
     </div>
 
     {{-- Botão de Enviar --}}

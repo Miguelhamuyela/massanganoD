@@ -1,5 +1,5 @@
 @extends('layouts._site.main')
-@section('title', 'Assessorarte- Política')
+@section('title', 'Sigecepa- Política')
 @section('content')
 
 

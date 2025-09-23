@@ -219,7 +219,7 @@
             {{-- Menu Município --}}
             <li class="nxl-item nxl-hasmenu">
                 <a href="javascript:void(0);" class="nxl-link">
-                    <span class="nxl-micon"><i class="feather-user"></i></span>
+                    <span class="nxl-micon"><i class="feather-map"></i></span>
                     <span class="nxl-mtext">Municípo</span><span class="nxl-arrow"><i
                             class="feather-chevron-right"></i></span>
                 </a>
@@ -235,7 +235,7 @@
             {{-- Menu Provinces --}}
             <li class="nxl-item nxl-hasmenu">
                 <a href="javascript:void(0);" class="nxl-link">
-                    <span class="nxl-micon"><i class="feather-user"></i></span>
+                    <span class="nxl-micon"><i class="feather-map-pin"></i></span>
                     <span class="nxl-mtext">Províncias</span><span class="nxl-arrow"><i
                             class="feather-chevron-right"></i></span>
                 </a>
@@ -250,7 +250,7 @@
             {{-- Menu Universidade --}}
             <li class="nxl-item nxl-hasmenu">
                 <a href="javascript:void(0);" class="nxl-link">
-                    <span class="nxl-micon"><i class="feather-user"></i></span>
+                    <span class="nxl-micon"><i class="feather-book-open"></i></span>
                     <span class="nxl-mtext">Universidade</span><span class="nxl-arrow"><i
                             class="feather-chevron-right"></i></span>
                 </a>
@@ -266,7 +266,7 @@
             {{-- Menu Finalistas --}}
             <li class="nxl-item nxl-hasmenu">
                 <a href="javascript:void(0);" class="nxl-link">
-                    <span class="nxl-micon"><i class="feather-user"></i></span>
+                    <span class="nxl-micon"><i class="feather-pocket"></i></span>
                     <span class="nxl-mtext">Finalistas</span><span class="nxl-arrow"><i
                             class="feather-chevron-right"></i></span>
                 </a>
