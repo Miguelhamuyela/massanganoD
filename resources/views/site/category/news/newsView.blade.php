@@ -56,7 +56,7 @@
                                 <div class="blog-tag">
                                     <h6 class="title">Etiqueta relacionada :</h6>
                                     <div class="tagcloud"><a href="blog.html">Sports</a> <a
-                                            href="{{ route('site.policy') }}">Políticas</a>
+                                            href="{{ route('site.news.list', ['Politica']) }}">Políticas</a>
                                         <a href="blog.html">Business</a>
                                     </div>
                                 </div>
@@ -332,10 +332,10 @@
                         <div class="widget widget_tag_cloud">
                             <h3 class="widget_title">Tags Populares</h3>
                             <div class="tagcloud">
-                                <a href="{{ route('site.policy') }}">Politicas</a>
-                                <a href="{{ route('site.economic') }}">Economia</a>
+                                <a href="{{ route('site.news.list', ['Politica']) }}">Politicas</a>
+                                <a href="{{ route('site.news.list', ['Economia']) }}">Economia</a>
                                 <a href="{{ route('site.tech') }}">Tecnologia</a>
-                                <a href="{{ route('site.society') }}">sociedade</a>
+                                <a href="{{ route('site.news.list', ['Sociedade']) }}">sociedade</a>
                             </div>
                         </div>
                     </aside>
