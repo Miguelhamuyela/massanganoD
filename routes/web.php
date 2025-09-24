@@ -1,27 +1,37 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Site\SiteController;
-use App\Http\Controllers\contactController;
+/* use App\Http\Controllers\Site\SiteController;
+use App\Http\Controllers\contactController; */
 use App\Http\Controllers\Site\HomeController;
 use App\Http\Controllers\Site\NewsController;
+use App\Http\Controllers\Site\PublicationController;
+use App\Http\Controllers\Site\VideoController;
+use App\Http\Controllers\Site\GaleryController;
 
+/* home route */
+Route::redirect('/', 'site/home');
+Route::get('site/home', [HomeController::class, 'home'])->name('site.home');
+/* events route */
+Route::get('site/publication', [PublicationController::class, 'publication'])->name('site.publication');
+/* videos route */
+Route::get('site/videos', [VideoController::class, 'videos'])->name('site.videos');
+/* galery route */
+Route::get('site/galery', [GaleryController::class, 'galery'])->name('site.galery');
+/* news details route */
+Route::get('site/newsDetails/{news}', [NewsController::class, 'details'])->name('site.news.details');
+/* news list route */
+Route::get('site/newsList/{category}', [NewsController::class, 'list'])->name('site.news.list');
+
+/* Rotas Descartadas */
 /* Site Routes */
 /* Route::post('/teste', [contactController::class, 'sendMail'])->name('sendMail');
 Route::get('/contato', function(){
     return view('contato');
 }); */
-Route::redirect('/', 'site/home');
-
-Route::get('site/home', [HomeController::class, 'home'])->name('site.home');
-Route::get('site/category', [SiteController::class, 'category'])->name('site.category');
-Route::get('site/tech', [SiteController::class, 'tech'])->name('site.tech');
-Route::get('site/newsCategory', [SiteController::class, 'newsCategory'])->name('site.newsCategory');
-Route::get('site/publication', [SiteController::class, 'publication'])->name('site.publication');
-Route::get('site/videos', [SiteController::class, 'videos'])->name('site.videos');
-Route::get('site/galery', [SiteController::class, 'galery'])->name('site.galery');
-Route::get('site/newsDetails/{news}', [NewsController::class, 'details'])->name('site.news.details');
-Route::get('site/newsList/{category}', [NewsController::class, 'list'])->name('site.news.list');
+/* Route::get('site/newsCategory', [SiteController::class, 'newsCategory'])->name('site.newsCategory'); */
+/* Route::get('site/category', [SiteController::class, 'category'])->name('site.category'); */
+/* Route::get('site/tech', [SiteController::class, 'tech'])->name('site.tech'); */
 /* Route::get('site/contact', [SiteController::class, 'contact'])->name('site.contact'); */
 /* Route::get('site/about', [SiteController::class, 'about'])->name('site.about'); */
 /* Routas de Categorias */
