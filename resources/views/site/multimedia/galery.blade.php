@@ -103,21 +103,21 @@
                             <h3 class="widget_title">Categorias</h3>
                             <ul>
                                 <li><a data-bg-src="assets/img/bg/category_bg_1_1.jpg"
-                                        href="{{ route('site.policy') }}">Políticas</a></li>
+                                        href="{{ route('site.news.list', ['Politica']) }}">Políticas</a></li>
                                 <li><a data-bg-src="assets/img/bg/category_bg_1_2.jpg"
-                                        href="{{ route('site.society') }}">Sociedades</a>
+                                        href="{{ route('site.news.list', ['Sociedade']) }}">Sociedades</a>
                                 </li>
                                 <li><a data-bg-src="assets/img/bg/category_bg_1_3.jpg"
-                                        href="{{ route('site.economic') }}">Economia
+                                        href="{{ route('site.news.list', ['Economia']) }}">Economia
                                         &
                                         Negócios</a>
                                 </li>
                                 <li><a data-bg-src="assets/img/bg/category_bg_1_4.jpg"
-                                        href="{{ route('site.culture') }}">Artes &
+                                        href="{{ route('site.news.list', ['Cultura']) }}">Artes &
                                         Culturas</a>
                                 </li>
                                 <li><a data-bg-src="assets/img/bg/category_bg_1_5.jpg"
-                                        href="{{ route('site.tech') }}">Ciências
+                                        href="{{ route('site.news.list', ['Tecnologia']) }}">Ciências
                                         Tecnologia</a>
                                 </li>
                                 {{-- <li><a data-bg-src="assets/img/bg/category_bg_1_6.jpg" href="blog.html">Entretenimento</a>
@@ -165,10 +165,10 @@
                         <div class="widget widget_tag_cloud">
                             <h3 class="widget_title">Tags Populares</h3>
                             <div class="tagcloud">
-                                <a href="{{ route('site.policy') }}">Politicas</a>
-                                <a href="{{ route('site.economic') }}">Economia</a>
-                                <a href="{{ route('site.tech') }}">Tecnologia</a>
-                                <a href="{{ route('site.society') }}">sociedade</a>
+                                <a href="{{ route('site.news.list', ['Politica']) }}">Politicas</a>
+                                <a href="{{ route('site.news.list', ['Economia']) }}">Economia</a>
+                                <a href="{{ route('site.news.list', ['Tecnologia']) }}">Tecnologia</a>
+                                <a href="{{ route('site.news.list', ['Sociedade']) }}">sociedade</a>
                             </div>
                         </div>
                     </aside>

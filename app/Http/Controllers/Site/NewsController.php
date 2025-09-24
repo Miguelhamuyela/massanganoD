@@ -37,7 +37,7 @@ class NewsController extends Controller
 
         $ads = Advertisement::orderByDesc('id')->take(1)->get();
 
-        return view('site.category.policy.policy', compact(
+        return view('site.news.list.index', compact(
             'news',
             'categories',
             'breaknews',

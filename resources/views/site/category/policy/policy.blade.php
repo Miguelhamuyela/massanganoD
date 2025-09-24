@@ -32,7 +32,7 @@
                                             @endforeach
                                             <h3 class="box-title-30">
                                                 <a class="hover-line"
-                                                    href="{{ route('site.newsDetails', ['news' => $item]) }}">{{ Str::limit($item->title, 50) }}</a>
+                                                    href="{{ route('site.news.details', ['news' => $item]) }}">{{ Str::limit($item->title, 50) }}</a>
                                             </h3>
                                             <p class="blog-text">{{ Str::limit($item->subtitle, 100) }}</p>
                                             <div class="blog-meta">
@@ -40,7 +40,7 @@
                                                 <a href="#"><i
                                                         class="fal fa-calendar-days"></i>{{ $item->updated_at->format('d M, Y') }}</a>
                                             </div>
-                                            <a href="{{ route('site.newsDetails', ['news' => $item]) }}"
+                                            <a href="{{ route('site.news.details', ['news' => $item]) }}"
                                                 class="th-btn style2">Ver mais<i class="fas fa-arrow-up-right ms-2"></i></a>
                                         </div>
                                     </div>
@@ -234,17 +234,17 @@
                             <h3 class="widget_title">Categorias</h3>
                             <ul>
                                 <li><a data-bg-src="assets/img/bg/category_bg_1_1.jpg"
-                                        href="{{ route('site.policy') }}">Políticas</a></li>
+                                        href="{{ route('site.news.list', ['Politica']) }}">Políticas</a></li>
                                 <li><a data-bg-src="assets/img/bg/category_bg_1_2.jpg"
-                                        href="{{ route('site.society') }}">Sociedades</a>
+                                        href="{{ route('site.news.list', ['Sociedade']) }}">Sociedades</a>
                                 </li>
                                 <li><a data-bg-src="assets/img/bg/category_bg_1_3.jpg"
-                                        href="{{ route('site.economic') }}">Economia
+                                        href="{{ route('site.news.list', ['Economia']) }}">Economia
                                         &
                                         Negócios</a>
                                 </li>
                                 <li><a data-bg-src="assets/img/bg/category_bg_1_4.jpg"
-                                        href="{{ route('site.culture') }}">Artes &
+                                        href="{{ route('site.news.list', ['Cultura']) }}">Artes &
                                         Culturas</a>
                                 </li>
                                 <li><a data-bg-src="assets/img/bg/category_bg_1_5.jpg"
@@ -351,10 +351,10 @@
                         <div class="widget widget_tag_cloud">
                             <h3 class="widget_title">Tags Populares</h3>
                             <div class="tagcloud">
-                                <a href="{{ route('site.policy') }}">Politicas</a>
-                                <a href="{{ route('site.economic') }}">Economia</a>
+                                <a href="{{ route('site.news.list', ['Politica']) }}">Politicas</a>
+                                <a href="{{ route('site.news.list', ['Economia']) }}">Economia</a>
                                 <a href="{{ route('site.tech') }}">Tecnologia</a>
-                                <a href="{{ route('site.society') }}">sociedade</a>
+                                <a href="{{ route('site.news.list', ['Sociedade']) }}">sociedade</a>
                             </div>
                         </div>
                         {{-- Fim das Tags Populares --}}
