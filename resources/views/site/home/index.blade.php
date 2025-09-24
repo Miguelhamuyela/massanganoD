@@ -371,7 +371,7 @@
                                     </div>
                                     <div class="blog-content">
                                         <a data-theme-color="#6234AC"
-                                            href="{{ route('site.newsCategory', $newsTech1->category->id) }}"
+                                            href="{{ route('site.news.list', ['category' => $newsTech1->category->name]) }}"
                                             class="category">
                                             {{ $newsTech1->category->name }}
                                         </a>
