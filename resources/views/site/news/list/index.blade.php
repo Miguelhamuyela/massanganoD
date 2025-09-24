@@ -85,7 +85,7 @@
                                         Culturas</a>
                                 </li>
                                 <li><a data-bg-src="assets/img/bg/category_bg_1_5.jpg"
-                                        href="{{ route('site.tech') }}">Ciências
+                                        href="{{ route('site.news.list', ['Tecnologia']) }}">Ciências
                                         Tecnologia</a>
                                 </li>
                                 {{-- <li><a data-bg-src="assets/img/bg/category_bg_1_6.jpg" href="blog.html">Entretenimento</a>
@@ -190,7 +190,7 @@
                             <div class="tagcloud">
                                 <a href="{{ route('site.news.list', ['Politica']) }}">Politicas</a>
                                 <a href="{{ route('site.news.list', ['Economia']) }}">Economia</a>
-                                <a href="{{ route('site.tech') }}">Tecnologia</a>
+                                <a href="{{ route('site.news.list', ['Tecnologia']) }}">Tecnologia</a>
                                 <a href="{{ route('site.news.list', ['Sociedade']) }}">sociedade</a>
                             </div>
                         </div>
