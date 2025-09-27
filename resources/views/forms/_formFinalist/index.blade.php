@@ -22,6 +22,16 @@
                             @endforeach
                         </select>
                     </div>
+                    {{-- Selecione a Data de inicio --}}
+                    <div class="col-lg-4 mb-4" id="escola-div">
+                        <label class="form-label select">Selecione a data de inicio</label>
+                        <input type="date" name="start_date" value="{{old('start_date', $finalist->start_date ?? '') }}" class="form-control">
+                    </div>
+                    {{-- Selecione a Data de termino --}}
+                    <div class="col-lg-4 mb-4" id="escola-div">
+                        <label class="form-label select">Selecione a data de termino</label>
+                        <input type="date" name="end_date" value="{{old('end_date', $finalist->end_date ?? '') }}" class="form-control">
+                    </div>
                     {{-- Fim do Selecione a Escola --}}
 
                     {{-- Selecione o Curso --}}
@@ -38,7 +48,7 @@
                     {{-- Fim do Selecione o Curso --}}
 
                     {{-- Div de Nomes dos nomes Finalistas --}}
-                    <div class="col-lg-6 mb-4">
+                    <div class="col-lg-4 mb-4">
                         <label class="form-label">Nome do Finalista</label>
                         <input type="text" class="form-control" name="name"
                             value="{{ old('name', $finalist->name ?? '') }}" id="name"
@@ -47,7 +57,7 @@
                     {{-- Fim da Div dos nomes Finalistas --}}
 
                     {{-- Div de E-mail dos Finalistas --}}
-                    <div class="col-lg-6 mb-4">
+                    <div class="col-lg-4 mb-4">
                         <label class="form-label">E-mail</label>
                         <input type="email" class="form-control" name="email"
                             value="{{ old('email', $finalist->email ?? '') }}" id="email"
@@ -56,7 +66,7 @@
                     {{-- Fim da Div do E-mail dos Finalistas --}}
 
                     {{-- Div de Telefone dos Finalistas --}}
-                    <div class="col-lg-6 mb-4">
+                    <div class="col-lg-4 mb-4">
                         <label class="form-label">Telefone</label>
                         <input type="text" class="form-control" name="phone"
                             value="{{ old('phone', $finalist->phone ?? '') }}" id="phone"
@@ -65,7 +75,7 @@
                     {{-- Fim da Div do Telefone dos Finalistas --}}
 
                     {{-- Div de BI dos Finalistas --}}
-                    <div class="col-lg-6 mb-4">
+                    <div class="col-lg-4 mb-4">
                         <label class="form-label">BI</label>
                         <input type="text" class="form-control" name="bi"
                             value="{{ old('bi', $finalist->bi ?? '') }}" id="bi"
@@ -74,7 +84,7 @@
                     {{-- Fim da Div do BI dos Finalistas --}}
 
                     {{-- Div de upload de imagem dos Finalistas --}}
-                    <div class="col-lg-6 mb-4">
+                    <div class="col-lg-4 mb-4">
                         <label for="coverImg" class="form-label">Imagem de Capa: </label>
                         <input type="file" class="form-control" name="cover" id="coverImg"
                             value="{{ old('cover', $finalist->cover ?? '') }}" placeholder="Carregue a imagem...">
@@ -82,7 +92,7 @@
                     {{-- Fim da Div de upload de imagem dos Finalistas --}}
 
                     {{-- Div de upload de arquivo dos Finalistas --}}
-                    <div class="col-lg-6 mb-4">
+                    <div class="col-lg-4 mb-4">
                         <label for="arquivo" class="form-label">Arquivo: </label>
                         <input type="file" class="form-control" name="file" id="arquivo"
                             value="{{ old('file', $finalist->file ?? '') }}" placeholder="Carregue o arquivo...">

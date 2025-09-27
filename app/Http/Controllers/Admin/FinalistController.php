@@ -15,11 +15,6 @@ use Illuminate\Support\Facades\Mail;
 
 class FinalistController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         //
@@ -27,11 +22,6 @@ class FinalistController extends Controller
         return view('_admin.finalists.list.index', compact('finalists'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
@@ -40,12 +30,6 @@ class FinalistController extends Controller
         return view('_admin.finalists.create.index', compact('schools', 'courses'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
@@ -54,6 +38,8 @@ class FinalistController extends Controller
             'email'       => 'required|email|unique:finalists',
             'bi'         => 'required|string|unique:finalists',
             'phone'       => 'required|string',
+            'start_date' => ['required', 'date'],
+            'end_date' => ['required', 'date'],
             'file' => 'required|file|mimes:pdf,doc,docx',
             'cover' => 'nullable|image|mimes:jpg,jpeg,png',
             'id_schools' => 'required|exists:schools,id',
@@ -83,16 +69,19 @@ class FinalistController extends Controller
             'email' => $request->email,
             'bi' => $request->bi,
             'phone' => $request->phone,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
             'file' => $fileName,
             'cover' => $imageName,
             'id_schools' => $request->id_schools,
             'id_courses' => $request->id_courses,
         ]);
 
+        /* enviar email */
         if(Finalist::count() > 0){
             $mensagem = "Novo Finalista Cadastrado: " . $request->name . ", Email: " . $request->email . ", BI: " . $request->bi . ", Telefone: " . $request->phone;
             Mail::to('batistalando7@gmail.com')->send(new contatoMail($mensagem));
-        }
+        }//fim de enviar email
         return redirect()->route('admin.finalist.listar')->with('success', 'Finalista criado com sucesso.');
     }
 
@@ -139,6 +128,8 @@ class FinalistController extends Controller
             'email'       => 'required|email|unique:finalists',
             'bi'         => 'required|string|unique:finalists',
             'phone'       => 'required|string',
+            'start_date' => ['required', 'date'],
+            'end_date' => ['required', 'date'],
             'file' => 'required|file|mimes:pdf,doc,docx',
             'cover' => 'nullable|image|mimes:jpg,jpeg,png',
             'id_schools' => 'required|exists:schools,id',
@@ -167,6 +158,8 @@ class FinalistController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'bi' => $request->bi,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
             'phone' => $request->phone,
             'file' => $fileName,
             'cover' => $imageName,
