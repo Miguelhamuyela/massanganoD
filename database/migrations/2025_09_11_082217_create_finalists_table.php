@@ -19,6 +19,8 @@ class CreateFinalistsTable extends Migration
             $table->string('email')->unique();
             $table->string('phone')->nullable();
             $table->string('bi')->unique();
+            $table->date('start_date');
+            $table->date('end_date');
             $table->String('file');
             $table->String('cover')->nullable();
             $table->unsignedBigInteger('id_schools');

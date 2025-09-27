@@ -16,6 +16,8 @@ class Finalist extends Model
         'email',
         'bi',
         'phone',
+        'start_date',
+        'end_date',
         'file',
         'cover',
         'id_schools',
