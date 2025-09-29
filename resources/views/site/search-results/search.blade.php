@@ -29,7 +29,7 @@
                                                 </a>
                                                 @if ($finalist->course)
                                                     <h6>
-                                                        Curso: <a data-theme-color="#6234AC" href="blog.html"
+                                                        Curso: <a data-theme-color="#6234AC" href="#blog.html"
                                                             class="course hover-line">
                                                             {{ $finalist->course->name }}
                                                         </a>
@@ -37,13 +37,24 @@
                                                 @endif
                                                 @if ($finalist->school)
                                                     <h6>
-                                                        Universidade: <a data-theme-color="#6234AC" href="blog.html"
+                                                        Universidade: <a data-theme-color="#6234AC" href="#blog.html"
                                                             class="school hover-line">
                                                             {{ $finalist->school->name }}
                                                         </a>
                                                     </h6>
                                                 @endif
-
+                                                @if ($finalist->start_year)
+                                                    <h6>
+                                                        Início: {{ $finalist->start_year }}
+                                                        </a>
+                                                    </h6>
+                                                @endif
+                                                @if ($finalist->end_year)
+                                                    <h6>
+                                                        Término: {{ $finalist->end_year }}
+                                                        </a>
+                                                    </h6>
+                                                @endif
                                                 @if ($finalist->file && file_exists(public_path('files/finalist/' . $finalist->file)))
                                                     <a href="{{ asset('files/finalist/' . $finalist->file) }}" download>
                                                         <i class="fas fa-file-pdf me-1"></i> Baixar PDF

@@ -11,6 +11,7 @@ use App\Models\School;
 use App\Models\Course;
 use Facade\FlareClient\Stacktrace\File;
 use App\Mail\contatoMail;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 
 class FinalistController extends Controller
@@ -38,8 +39,8 @@ class FinalistController extends Controller
             'email'       => 'required|email|unique:finalists',
             'bi'         => 'required|string|unique:finalists',
             'phone'       => 'required|string',
-            'start_date' => ['required', 'date'],
-            'end_date' => ['required', 'date'],
+            'start_year' => ['required'],
+            'end_year' => ['required'],
             'file' => 'required|file|mimes:pdf,doc,docx',
             'cover' => 'nullable|image|mimes:jpg,jpeg,png',
             'id_schools' => 'required|exists:schools,id',
@@ -64,13 +65,17 @@ class FinalistController extends Controller
             $file->move(public_path('files/finalist'), $fileName);
         }
 
+        // 🔥 Converter para apenas ano
+        $startYear = Carbon::parse($request->start_year)->format('Y');
+        $endYear   = Carbon::parse($request->end_year)->format('Y');
+
         Finalist::create([
             'name' => $request->name,
             'email' => $request->email,
             'bi' => $request->bi,
             'phone' => $request->phone,
-            'start_date' => $request->start_date,
-            'end_date' => $request->end_date,
+            'start_year' => $startYear,
+            'end_year' => $endYear,
             'file' => $fileName,
             'cover' => $imageName,
             'id_schools' => $request->id_schools,
@@ -78,10 +83,11 @@ class FinalistController extends Controller
         ]);
 
         /* enviar email */
-        if(Finalist::count() > 0){
+        if (Finalist::count() > 0) {
             $mensagem = "Novo Finalista Cadastrado: " . $request->name . ", Email: " . $request->email . ", BI: " . $request->bi . ", Telefone: " . $request->phone;
             Mail::to('batistalando7@gmail.com')->send(new contatoMail($mensagem));
-        }//fim de enviar email
+        } //fim de enviar email
+
         return redirect()->route('admin.finalist.listar')->with('success', 'Finalista criado com sucesso.');
     }
 
@@ -128,8 +134,8 @@ class FinalistController extends Controller
             'email'       => 'required|email|unique:finalists',
             'bi'         => 'required|string|unique:finalists',
             'phone'       => 'required|string',
-            'start_date' => ['required', 'date'],
-            'end_date' => ['required', 'date'],
+            'start_year' => ['required', 'date'],
+            'end_year' => ['required', 'date'],
             'file' => 'required|file|mimes:pdf,doc,docx',
             'cover' => 'nullable|image|mimes:jpg,jpeg,png',
             'id_schools' => 'required|exists:schools,id',
@@ -158,8 +164,8 @@ class FinalistController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'bi' => $request->bi,
-            'start_date' => $request->start_date,
-            'end_date' => $request->end_date,
+            'start_year' => $request->start_year,
+            'end_year' => $request->end_year,
             'phone' => $request->phone,
             'file' => $fileName,
             'cover' => $imageName,
