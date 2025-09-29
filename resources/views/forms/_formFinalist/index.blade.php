@@ -24,13 +24,15 @@
                     </div>
                     {{-- Selecione a Data de inicio --}}
                     <div class="col-lg-4 mb-4" id="escola-div">
-                        <label class="form-label select">Selecione a data de inicio</label>
-                        <input type="date" name="start_date" value="{{old('start_date', $finalist->start_date ?? '') }}" class="form-control">
+                        <label for="start_year" class="form-label">Ano de Início</label>
+                        <input type="number" id="start_year" class="form-control" name="start_year" min="1900" max="2100" step="1"
+                            value="{{ old('ano', date('Y')) }}">
                     </div>
                     {{-- Selecione a Data de termino --}}
                     <div class="col-lg-4 mb-4" id="escola-div">
-                        <label class="form-label select">Selecione a data de termino</label>
-                        <input type="date" name="end_date" value="{{old('end_date', $finalist->end_date ?? '') }}" class="form-control">
+                        <label for="end_year" class="form-label">Ano de Término</label>
+                        <input type="number" id="end_year" class="form-control" name="end_year" min="1900" max="2100" step="1"
+                            value="{{ old('ano', date('Y')) }}">
                     </div>
                     {{-- Fim do Selecione a Escola --}}
 
